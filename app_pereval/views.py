@@ -34,6 +34,9 @@ class PerevalViewSet(viewsets.ModelViewSet):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ('user__email',)
 
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
+
     def create(self, request, *args, **kwargs):
         serializer = PerevalSerializer(data=request.data)
         if serializer.is_valid():
