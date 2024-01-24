@@ -9,6 +9,7 @@ from .models import *
 class AppUserViewSet(viewsets.ModelViewSet):
     queryset = AppUser.objects.all()
     serializer_class = AppUserSerializer
+    filterset_fields = ['email', 'name', 'surname', 'patronymic']
 
 
 class CoordsViewSet(viewsets.ModelViewSet):

@@ -11,7 +11,7 @@ class AppUser(models.Model):
     patronymic = models.CharField(max_length=30, blank=True, default=None, verbose_name='Отчество')
 
     def __str__(self):
-        return f'{self.email}'
+        return f'{self.email}, {self.name}, {self.surname}, {self.patronymic}'
 
 
 class Coords(models.Model):
@@ -45,7 +45,7 @@ class Pereval(models.Model):
     level = models.OneToOneField(Level, on_delete=models.PROTECT, verbose_name='Категория трудности')
 
     def __str__(self):
-        return f'{self.title}'
+        return f'{self.pk} {self.beauty_title}'
 
 
 def get_path_upload_images(instance, file):

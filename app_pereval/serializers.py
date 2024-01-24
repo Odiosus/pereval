@@ -62,12 +62,13 @@ class ImagesSerializer(serializers.ModelSerializer):
         ]
 
 
-class PerevalSerializer(WritableNestedModelSerializer):
+class PerevalSerializer(WritableNestedModelSerializer, serializers.HyperlinkedModelSerializer):
     add_time = serializers.DateTimeField(format='%Y-%m-%d %H:%M:%S', read_only=True)
     user = AppUserSerializer()
     coord_id = CoordsSerializer()
     level = LevelSerializer(allow_null=True)
     images = ImagesSerializer(many=True)
+    id = serializers.HyperlinkedIdentityField(view_name='pereval-detail')
 
     class Meta:
         model = Pereval
