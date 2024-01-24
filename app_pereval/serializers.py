@@ -14,6 +14,21 @@ class AppUserSerializer(serializers.ModelSerializer):
             'patronymic',
         ]
 
+    def save(self, **kwargs):
+        self.is_valid()
+        user = AppUser.objects.filter(email=self.validated_data.get('email'))
+        if user.exists():
+            return user.first()
+        else:
+            new_user = AppUser.objects.create(
+                email=self.validated_data.get('email'),
+                phone=self.validated_data.get('phone'),
+                name=self.validated_data.get('name'),
+                surname=self.validated_data.get('surname'),
+                patronymic=self.validated_data.get('otc'),
+            )
+            return new_user
+
 
 class CoordsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -69,3 +84,4 @@ class PerevalSerializer(WritableNestedModelSerializer):
             'level',
             'images',
         ]
+        read_only_fields = ['status']
