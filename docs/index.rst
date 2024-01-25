@@ -10,6 +10,7 @@ Welcome to Pereval's documentation!
    :maxdepth: 3
    :caption: Документация по проекту 'Pereval':
 
+   modules
 
 Indices and tables
 ==================

@@ -21,7 +21,9 @@
         <script src="_static/translations.js?v=29b1f277"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-    <link rel="search" title="Поиск" href="search.html" /> 
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="app_pereval.migrations package" href="app_pereval.migrations.html" />
+    <link rel="prev" title="pereval" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,160 +45,59 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">app_pereval package</a><ul>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-app_pereval.admin">app_pereval.admin module</a></li>
-<li><a class="reference internal" href="#module-app_pereval.apps">app_pereval.apps module</a><ul>
-<li><a class="reference internal" href="#app_pereval.apps.AppPerevalConfig"><code class="docutils literal notranslate"><span class="pre">AppPerevalConfig</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.apps.AppPerevalConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">AppPerevalConfig.default_auto_field</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.apps.AppPerevalConfig.name"><code class="docutils literal notranslate"><span class="pre">AppPerevalConfig.name</span></code></a></li>
+              <p class="caption" role="heading"><span class="caption-text">Документация по проекту 'Pereval':</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pereval</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">app_pereval package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="app_pereval.migrations.html">app_pereval.migrations package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.admin">app_pereval.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.apps">app_pereval.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.apps.AppPerevalConfig"><code class="docutils literal notranslate"><span class="pre">AppPerevalConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.choices">app_pereval.choices module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.models">app_pereval.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.models.AppUser"><code class="docutils literal notranslate"><span class="pre">AppUser</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.models.Coords"><code class="docutils literal notranslate"><span class="pre">Coords</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.models.Images"><code class="docutils literal notranslate"><span class="pre">Images</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.models.Level"><code class="docutils literal notranslate"><span class="pre">Level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.models.Pereval"><code class="docutils literal notranslate"><span class="pre">Pereval</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.models.get_path_upload_images"><code class="docutils literal notranslate"><span class="pre">get_path_upload_images()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.serializers">app_pereval.serializers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.serializers.AppUserSerializer"><code class="docutils literal notranslate"><span class="pre">AppUserSerializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.serializers.CoordsSerializer"><code class="docutils literal notranslate"><span class="pre">CoordsSerializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.serializers.ImagesSerializer"><code class="docutils literal notranslate"><span class="pre">ImagesSerializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.serializers.LevelSerializer"><code class="docutils literal notranslate"><span class="pre">LevelSerializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.serializers.PerevalSerializer"><code class="docutils literal notranslate"><span class="pre">PerevalSerializer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.tests">app_pereval.tests module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.tests.PerevalTestCase"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval.views">app_pereval.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.views.AppUserViewSet"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.views.CoordsViewSet"><code class="docutils literal notranslate"><span class="pre">CoordsViewSet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.views.ImagesViewSet"><code class="docutils literal notranslate"><span class="pre">ImagesViewSet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.views.LevelViewSet"><code class="docutils literal notranslate"><span class="pre">LevelViewSet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app_pereval.views.PerevalViewSet"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-app_pereval">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pereval.html">pereval package</a></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><a class="reference internal" href="#module-app_pereval.choices">app_pereval.choices module</a></li>
-<li><a class="reference internal" href="#module-app_pereval.models">app_pereval.models module</a><ul>
-<li><a class="reference internal" href="#app_pereval.models.AppUser"><code class="docutils literal notranslate"><span class="pre">AppUser</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">AppUser.DoesNotExist</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">AppUser.MultipleObjectsReturned</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.email"><code class="docutils literal notranslate"><span class="pre">AppUser.email</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.id"><code class="docutils literal notranslate"><span class="pre">AppUser.id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.name"><code class="docutils literal notranslate"><span class="pre">AppUser.name</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.objects"><code class="docutils literal notranslate"><span class="pre">AppUser.objects</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.patronymic"><code class="docutils literal notranslate"><span class="pre">AppUser.patronymic</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.pereval_set"><code class="docutils literal notranslate"><span class="pre">AppUser.pereval_set</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.phone"><code class="docutils literal notranslate"><span class="pre">AppUser.phone</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.AppUser.surname"><code class="docutils literal notranslate"><span class="pre">AppUser.surname</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.models.Coords"><code class="docutils literal notranslate"><span class="pre">Coords</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.models.Coords.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Coords.DoesNotExist</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Coords.MultipleObjectsReturned</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.height"><code class="docutils literal notranslate"><span class="pre">Coords.height</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.id"><code class="docutils literal notranslate"><span class="pre">Coords.id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.latitude"><code class="docutils literal notranslate"><span class="pre">Coords.latitude</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.longitude"><code class="docutils literal notranslate"><span class="pre">Coords.longitude</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.objects"><code class="docutils literal notranslate"><span class="pre">Coords.objects</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Coords.pereval"><code class="docutils literal notranslate"><span class="pre">Coords.pereval</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.models.Images"><code class="docutils literal notranslate"><span class="pre">Images</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.models.Images.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Images.DoesNotExist</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Images.MultipleObjectsReturned</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.id"><code class="docutils literal notranslate"><span class="pre">Images.id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.images"><code class="docutils literal notranslate"><span class="pre">Images.images</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.name"><code class="docutils literal notranslate"><span class="pre">Images.name</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.objects"><code class="docutils literal notranslate"><span class="pre">Images.objects</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.pereval"><code class="docutils literal notranslate"><span class="pre">Images.pereval</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Images.pereval_id"><code class="docutils literal notranslate"><span class="pre">Images.pereval_id</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.models.Level"><code class="docutils literal notranslate"><span class="pre">Level</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.models.Level.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Level.DoesNotExist</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Level.MultipleObjectsReturned</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.autumn"><code class="docutils literal notranslate"><span class="pre">Level.autumn</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.get_autumn_display"><code class="docutils literal notranslate"><span class="pre">Level.get_autumn_display()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.get_spring_display"><code class="docutils literal notranslate"><span class="pre">Level.get_spring_display()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.get_summer_display"><code class="docutils literal notranslate"><span class="pre">Level.get_summer_display()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.get_winter_display"><code class="docutils literal notranslate"><span class="pre">Level.get_winter_display()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.id"><code class="docutils literal notranslate"><span class="pre">Level.id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.objects"><code class="docutils literal notranslate"><span class="pre">Level.objects</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.pereval"><code class="docutils literal notranslate"><span class="pre">Level.pereval</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.spring"><code class="docutils literal notranslate"><span class="pre">Level.spring</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.summer"><code class="docutils literal notranslate"><span class="pre">Level.summer</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Level.winter"><code class="docutils literal notranslate"><span class="pre">Level.winter</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval"><code class="docutils literal notranslate"><span class="pre">Pereval</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Pereval.DoesNotExist</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Pereval.MultipleObjectsReturned</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.add_time"><code class="docutils literal notranslate"><span class="pre">Pereval.add_time</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.beauty_title"><code class="docutils literal notranslate"><span class="pre">Pereval.beauty_title</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.connect"><code class="docutils literal notranslate"><span class="pre">Pereval.connect</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.coord_id"><code class="docutils literal notranslate"><span class="pre">Pereval.coord_id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.coord_id_id"><code class="docutils literal notranslate"><span class="pre">Pereval.coord_id_id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.get_next_by_add_time"><code class="docutils literal notranslate"><span class="pre">Pereval.get_next_by_add_time()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.get_previous_by_add_time"><code class="docutils literal notranslate"><span class="pre">Pereval.get_previous_by_add_time()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.get_status_display"><code class="docutils literal notranslate"><span class="pre">Pereval.get_status_display()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.id"><code class="docutils literal notranslate"><span class="pre">Pereval.id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.images"><code class="docutils literal notranslate"><span class="pre">Pereval.images</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.level"><code class="docutils literal notranslate"><span class="pre">Pereval.level</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.level_id"><code class="docutils literal notranslate"><span class="pre">Pereval.level_id</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.objects"><code class="docutils literal notranslate"><span class="pre">Pereval.objects</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.other_titles"><code class="docutils literal notranslate"><span class="pre">Pereval.other_titles</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.status"><code class="docutils literal notranslate"><span class="pre">Pereval.status</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.title"><code class="docutils literal notranslate"><span class="pre">Pereval.title</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.user"><code class="docutils literal notranslate"><span class="pre">Pereval.user</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.models.Pereval.user_id"><code class="docutils literal notranslate"><span class="pre">Pereval.user_id</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.models.get_path_upload_images"><code class="docutils literal notranslate"><span class="pre">get_path_upload_images()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-app_pereval.serializers">app_pereval.serializers module</a><ul>
-<li><a class="reference internal" href="#app_pereval.serializers.AppUserSerializer"><code class="docutils literal notranslate"><span class="pre">AppUserSerializer</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.serializers.AppUserSerializer.save"><code class="docutils literal notranslate"><span class="pre">AppUserSerializer.save()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.serializers.CoordsSerializer"><code class="docutils literal notranslate"><span class="pre">CoordsSerializer</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.serializers.ImagesSerializer"><code class="docutils literal notranslate"><span class="pre">ImagesSerializer</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.serializers.LevelSerializer"><code class="docutils literal notranslate"><span class="pre">LevelSerializer</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.serializers.PerevalSerializer"><code class="docutils literal notranslate"><span class="pre">PerevalSerializer</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.serializers.PerevalSerializer.validate"><code class="docutils literal notranslate"><span class="pre">PerevalSerializer.validate()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-app_pereval.tests">app_pereval.tests module</a><ul>
-<li><a class="reference internal" href="#app_pereval.tests.PerevalTestCase"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.tests.PerevalTestCase.setUp"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase.setUp()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.tests.PerevalTestCase.test_pereval_detail"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase.test_pereval_detail()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-app_pereval.views">app_pereval.views module</a><ul>
-<li><a class="reference internal" href="#app_pereval.views.AppUserViewSet"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.views.AppUserViewSet.filterset_fields"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet.filterset_fields</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.AppUserViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet.queryset</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.AppUserViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet.serializer_class</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.views.CoordsViewSet"><code class="docutils literal notranslate"><span class="pre">CoordsViewSet</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.views.CoordsViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">CoordsViewSet.queryset</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.CoordsViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">CoordsViewSet.serializer_class</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.views.ImagesViewSet"><code class="docutils literal notranslate"><span class="pre">ImagesViewSet</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.views.ImagesViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">ImagesViewSet.queryset</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.ImagesViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">ImagesViewSet.serializer_class</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.views.LevelViewSet"><code class="docutils literal notranslate"><span class="pre">LevelViewSet</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.views.LevelViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">LevelViewSet.queryset</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.LevelViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">LevelViewSet.serializer_class</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet</span></code></a><ul>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.create"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.create()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.filter_backends</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.filterset_fields"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.filterset_fields</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.get"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.get()</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.queryset</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.serializer_class</span></code></a></li>
-<li><a class="reference internal" href="#app_pereval.views.PerevalViewSet.update"><code class="docutils literal notranslate"><span class="pre">PerevalViewSet.update()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-app_pereval">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -211,6 +112,7 @@
           <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">pereval</a></li>
       <li class="breadcrumb-item active">app_pereval package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/app_pereval.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
@@ -1040,7 +942,10 @@ latitude и longitude с плавающей точкой, и height — цело
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="modules.html" class="btn btn-neutral float-left" title="pereval" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="app_pereval.migrations.html" class="btn btn-neutral float-right" title="app_pereval.migrations package" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

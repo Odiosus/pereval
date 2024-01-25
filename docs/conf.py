@@ -8,9 +8,8 @@
 import os
 import sys
 
-# sys.path.insert(0, os.path.abspath("../"))
-pkg_path = os.path.abspath('..')
-sys.path.insert(0, pkg_path)
+sys.path.insert(0, os.path.abspath("../"))
+
 
 master_doc = 'index'
 
@@ -24,7 +23,6 @@ release = '1.0.0'
 django_settings = "pereval.settings"
 django_show_db_tables = True
 django_show_db_tables_abstract = True
-# django_choices_to_show = 10
 
 extensions = [
     'sphinxcontrib_django',
