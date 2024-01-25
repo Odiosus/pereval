@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Models &mdash; документация Pereval 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e35015f7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=29b1f277"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Pereval
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Models</a><ul>
+<li><a class="reference internal" href="#app_pereval.models.AppUser"><code class="docutils literal notranslate"><span class="pre">AppUser</span></code></a><ul>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">AppUser.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">AppUser.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.email"><code class="docutils literal notranslate"><span class="pre">AppUser.email</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.id"><code class="docutils literal notranslate"><span class="pre">AppUser.id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.name"><code class="docutils literal notranslate"><span class="pre">AppUser.name</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.objects"><code class="docutils literal notranslate"><span class="pre">AppUser.objects</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.patronymic"><code class="docutils literal notranslate"><span class="pre">AppUser.patronymic</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.pereval_set"><code class="docutils literal notranslate"><span class="pre">AppUser.pereval_set</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.phone"><code class="docutils literal notranslate"><span class="pre">AppUser.phone</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.AppUser.surname"><code class="docutils literal notranslate"><span class="pre">AppUser.surname</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app_pereval.models.Coords"><code class="docutils literal notranslate"><span class="pre">Coords</span></code></a><ul>
+<li><a class="reference internal" href="#app_pereval.models.Coords.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Coords.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Coords.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.height"><code class="docutils literal notranslate"><span class="pre">Coords.height</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.id"><code class="docutils literal notranslate"><span class="pre">Coords.id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.latitude"><code class="docutils literal notranslate"><span class="pre">Coords.latitude</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.longitude"><code class="docutils literal notranslate"><span class="pre">Coords.longitude</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.objects"><code class="docutils literal notranslate"><span class="pre">Coords.objects</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Coords.pereval"><code class="docutils literal notranslate"><span class="pre">Coords.pereval</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app_pereval.models.Images"><code class="docutils literal notranslate"><span class="pre">Images</span></code></a><ul>
+<li><a class="reference internal" href="#app_pereval.models.Images.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Images.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Images.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.id"><code class="docutils literal notranslate"><span class="pre">Images.id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.images"><code class="docutils literal notranslate"><span class="pre">Images.images</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.name"><code class="docutils literal notranslate"><span class="pre">Images.name</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.objects"><code class="docutils literal notranslate"><span class="pre">Images.objects</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.pereval"><code class="docutils literal notranslate"><span class="pre">Images.pereval</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Images.pereval_id"><code class="docutils literal notranslate"><span class="pre">Images.pereval_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app_pereval.models.Level"><code class="docutils literal notranslate"><span class="pre">Level</span></code></a><ul>
+<li><a class="reference internal" href="#app_pereval.models.Level.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Level.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Level.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.autumn"><code class="docutils literal notranslate"><span class="pre">Level.autumn</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.get_autumn_display"><code class="docutils literal notranslate"><span class="pre">Level.get_autumn_display()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.get_spring_display"><code class="docutils literal notranslate"><span class="pre">Level.get_spring_display()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.get_summer_display"><code class="docutils literal notranslate"><span class="pre">Level.get_summer_display()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.get_winter_display"><code class="docutils literal notranslate"><span class="pre">Level.get_winter_display()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.id"><code class="docutils literal notranslate"><span class="pre">Level.id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.objects"><code class="docutils literal notranslate"><span class="pre">Level.objects</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.pereval"><code class="docutils literal notranslate"><span class="pre">Level.pereval</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.spring"><code class="docutils literal notranslate"><span class="pre">Level.spring</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.summer"><code class="docutils literal notranslate"><span class="pre">Level.summer</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Level.winter"><code class="docutils literal notranslate"><span class="pre">Level.winter</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval"><code class="docutils literal notranslate"><span class="pre">Pereval</span></code></a><ul>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Pereval.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Pereval.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.add_time"><code class="docutils literal notranslate"><span class="pre">Pereval.add_time</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.beauty_title"><code class="docutils literal notranslate"><span class="pre">Pereval.beauty_title</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.connect"><code class="docutils literal notranslate"><span class="pre">Pereval.connect</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.coord_id"><code class="docutils literal notranslate"><span class="pre">Pereval.coord_id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.coord_id_id"><code class="docutils literal notranslate"><span class="pre">Pereval.coord_id_id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.get_next_by_add_time"><code class="docutils literal notranslate"><span class="pre">Pereval.get_next_by_add_time()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.get_previous_by_add_time"><code class="docutils literal notranslate"><span class="pre">Pereval.get_previous_by_add_time()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.get_status_display"><code class="docutils literal notranslate"><span class="pre">Pereval.get_status_display()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.id"><code class="docutils literal notranslate"><span class="pre">Pereval.id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.images"><code class="docutils literal notranslate"><span class="pre">Pereval.images</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.level"><code class="docutils literal notranslate"><span class="pre">Pereval.level</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.level_id"><code class="docutils literal notranslate"><span class="pre">Pereval.level_id</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.objects"><code class="docutils literal notranslate"><span class="pre">Pereval.objects</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.other_titles"><code class="docutils literal notranslate"><span class="pre">Pereval.other_titles</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.status"><code class="docutils literal notranslate"><span class="pre">Pereval.status</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.title"><code class="docutils literal notranslate"><span class="pre">Pereval.title</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.user"><code class="docutils literal notranslate"><span class="pre">Pereval.user</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.models.Pereval.user_id"><code class="docutils literal notranslate"><span class="pre">Pereval.user_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app_pereval.models.get_path_upload_images"><code class="docutils literal notranslate"><span class="pre">get_path_upload_images()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pereval</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/models.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="models">
+<h1>Models<a class="headerlink" href="#models" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-app_pereval.models">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app_pereval.models.</span></span><span class="sig-name descname"><span class="pre">AppUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/models.html#AppUser"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.models.AppUser" title="Link to this definition"></a></dt>
+<dd><p><strong>Database table:</strong> <code class="docutils literal notranslate"><span class="pre">app_pereval_appuser</span></code></p>
+<p>Модель таблицы AppUser, где будут храниться данные о каждом пользователе.
+Имеет строковых поля: ФИО, эл. почта и номер телефона</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><em>BigAutoField</em></a>) – Primary key: ID</p></li>
+<li><p><strong>email</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.EmailField" title="(в Django v5.0)"><em>EmailField</em></a>) – Электронная почта</p></li>
+<li><p><strong>phone</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Телефон</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Имя</p></li>
+<li><p><strong>surname</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Фамилия</p></li>
+<li><p><strong>patronymic</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Отчество</p></li>
+</ul>
+</dd>
+</dl>
+<p>Reverse relationships:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pereval</strong> (Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> from <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a>) – All perevals of this app user (related name of <a class="reference internal" href="#app_pereval.models.Pereval.user" title="app_pereval.models.Pereval.user"><code class="xref py py-attr docutils literal notranslate"><span class="pre">user</span></code></a>)</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#app_pereval.models.AppUser.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#app_pereval.models.AppUser.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#app_pereval.models.AppUser.email" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.EmailField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailField</span></code></a></p>
+<p>Электронная почта</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app_pereval.models.AppUser.id" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BigAutoField</span></code></a></p>
+<p>Primary key: ID</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#app_pereval.models.AppUser.name" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Имя</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#app_pereval.models.AppUser.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.patronymic">
+<span class="sig-name descname"><span class="pre">patronymic</span></span><a class="headerlink" href="#app_pereval.models.AppUser.patronymic" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Отчество</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.pereval_set">
+<span class="sig-name descname"><span class="pre">pereval_set</span></span><a class="headerlink" href="#app_pereval.models.AppUser.pereval_set" title="Link to this definition"></a></dt>
+<dd><p>Type: Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> from <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a></p>
+<p>All perevals of this app user (related name of <a class="reference internal" href="#app_pereval.models.Pereval.user" title="app_pereval.models.Pereval.user"><code class="xref py py-attr docutils literal notranslate"><span class="pre">user</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.phone">
+<span class="sig-name descname"><span class="pre">phone</span></span><a class="headerlink" href="#app_pereval.models.AppUser.phone" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Телефон</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.AppUser.surname">
+<span class="sig-name descname"><span class="pre">surname</span></span><a class="headerlink" href="#app_pereval.models.AppUser.surname" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Фамилия</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app_pereval.models.Coords">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app_pereval.models.</span></span><span class="sig-name descname"><span class="pre">Coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/models.html#Coords"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.models.Coords" title="Link to this definition"></a></dt>
+<dd><p><strong>Database table:</strong> <code class="docutils literal notranslate"><span class="pre">app_pereval_coords</span></code></p>
+<p>Модель таблицы Coords. Имеет поля в виде трёх координат —
+latitude и longitude с плавающей точкой, и height — целочисленное.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><em>BigAutoField</em></a>) – Primary key: ID</p></li>
+<li><p><strong>latitude</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.FloatField" title="(в Django v5.0)"><em>FloatField</em></a>) – Широта</p></li>
+<li><p><strong>longitude</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.FloatField" title="(в Django v5.0)"><em>FloatField</em></a>) – Долгота</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.IntegerField" title="(в Django v5.0)"><em>IntegerField</em></a>) – Высота</p></li>
+</ul>
+</dd>
+</dl>
+<p>Reverse relationships:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pereval</strong> (Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> from <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a>) – The pereval of this coords (related name of <a class="reference internal" href="#app_pereval.models.Pereval.coord_id" title="app_pereval.models.Pereval.coord_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">coord_id</span></code></a>)</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#app_pereval.models.Coords.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#app_pereval.models.Coords.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#app_pereval.models.Coords.height" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.IntegerField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegerField</span></code></a></p>
+<p>Высота</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app_pereval.models.Coords.id" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BigAutoField</span></code></a></p>
+<p>Primary key: ID</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.latitude">
+<span class="sig-name descname"><span class="pre">latitude</span></span><a class="headerlink" href="#app_pereval.models.Coords.latitude" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.FloatField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">FloatField</span></code></a></p>
+<p>Широта</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.longitude">
+<span class="sig-name descname"><span class="pre">longitude</span></span><a class="headerlink" href="#app_pereval.models.Coords.longitude" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.FloatField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">FloatField</span></code></a></p>
+<p>Долгота</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#app_pereval.models.Coords.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Coords.pereval">
+<span class="sig-name descname"><span class="pre">pereval</span></span><a class="headerlink" href="#app_pereval.models.Coords.pereval" title="Link to this definition"></a></dt>
+<dd><p>Type: Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> from <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a></p>
+<p>The pereval of this coords (related name of <a class="reference internal" href="#app_pereval.models.Pereval.coord_id" title="app_pereval.models.Pereval.coord_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">coord_id</span></code></a>)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app_pereval.models.Images">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app_pereval.models.</span></span><span class="sig-name descname"><span class="pre">Images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/models.html#Images"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.models.Images" title="Link to this definition"></a></dt>
+<dd><p><strong>Database table:</strong> <code class="docutils literal notranslate"><span class="pre">app_pereval_images</span></code></p>
+<p>Модель таблицы Images. Организована связь таблицы Pereval с изображениями.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><em>BigAutoField</em></a>) – Primary key: ID</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Название</p></li>
+<li><p><strong>images</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ImageField" title="(в Django v5.0)"><em>ImageField</em></a>) – Фото</p></li>
+</ul>
+</dd>
+</dl>
+<p>Relationship fields:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pereval</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> to <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a>) – Локация (related name: <a class="reference internal" href="#app_pereval.models.Pereval.images" title="app_pereval.models.Pereval.images"><code class="xref py py-attr docutils literal notranslate"><span class="pre">images</span></code></a>)</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Images.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#app_pereval.models.Images.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Images.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#app_pereval.models.Images.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Images.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app_pereval.models.Images.id" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BigAutoField</span></code></a></p>
+<p>Primary key: ID</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Images.images">
+<span class="sig-name descname"><span class="pre">images</span></span><a class="headerlink" href="#app_pereval.models.Images.images" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ImageField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageField</span></code></a></p>
+<p>Фото</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Images.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#app_pereval.models.Images.name" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Название</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Images.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#app_pereval.models.Images.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Images.pereval">
+<span class="sig-name descname"><span class="pre">pereval</span></span><a class="headerlink" href="#app_pereval.models.Images.pereval" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> to <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a></p>
+<p>Локация (related name: <a class="reference internal" href="#app_pereval.models.Pereval.images" title="app_pereval.models.Pereval.images"><code class="xref py py-attr docutils literal notranslate"><span class="pre">images</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Images.pereval_id">
+<span class="sig-name descname"><span class="pre">pereval_id</span></span><a class="headerlink" href="#app_pereval.models.Images.pereval_id" title="Link to this definition"></a></dt>
+<dd><p>Internal field, use <a class="reference internal" href="#app_pereval.models.Images.pereval" title="app_pereval.models.Images.pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">pereval</span></code></a> instead.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app_pereval.models.Level">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app_pereval.models.</span></span><span class="sig-name descname"><span class="pre">Level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/models.html#Level"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.models.Level" title="Link to this definition"></a></dt>
+<dd><p><strong>Database table:</strong> <code class="docutils literal notranslate"><span class="pre">app_pereval_level</span></code></p>
+<p>Модель таблицы Level — уровень сложности перевала в разное время года.
+Содержит четыре текстовых поля.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><em>BigAutoField</em></a>) – Primary key: ID</p></li>
+<li><p><strong>winter</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Категория трудности: ЗИМА</p></li>
+<li><p><strong>summer</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Категория трудности: ЛЕТО</p></li>
+<li><p><strong>autumn</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Категория трудности: ОСЕНЬ</p></li>
+<li><p><strong>spring</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Категория трудности: ВЕСНА</p></li>
+</ul>
+</dd>
+</dl>
+<p>Reverse relationships:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pereval</strong> (Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> from <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a>) – The pereval of this level (related name of <a class="reference internal" href="#app_pereval.models.Pereval.level" title="app_pereval.models.Pereval.level"><code class="xref py py-attr docutils literal notranslate"><span class="pre">level</span></code></a>)</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Level.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#app_pereval.models.Level.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Level.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#app_pereval.models.Level.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.autumn">
+<span class="sig-name descname"><span class="pre">autumn</span></span><a class="headerlink" href="#app_pereval.models.Level.autumn" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Категория трудности: ОСЕНЬ</p>
+<p>Choices:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">''</span></code> (Empty string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1A</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1B</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2В</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3В</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Level.get_autumn_display">
+<span class="sig-name descname"><span class="pre">get_autumn_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.CharField:</span> <span class="pre">autumn&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Level.get_autumn_display" title="Link to this definition"></a></dt>
+<dd><p>Shows the label of the <a class="reference internal" href="#app_pereval.models.Level.autumn" title="app_pereval.models.Level.autumn"><code class="xref py py-attr docutils literal notranslate"><span class="pre">autumn</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_FOO_display" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_FOO_display()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Level.get_spring_display">
+<span class="sig-name descname"><span class="pre">get_spring_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.CharField:</span> <span class="pre">spring&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Level.get_spring_display" title="Link to this definition"></a></dt>
+<dd><p>Shows the label of the <a class="reference internal" href="#app_pereval.models.Level.spring" title="app_pereval.models.Level.spring"><code class="xref py py-attr docutils literal notranslate"><span class="pre">spring</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_FOO_display" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_FOO_display()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Level.get_summer_display">
+<span class="sig-name descname"><span class="pre">get_summer_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.CharField:</span> <span class="pre">summer&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Level.get_summer_display" title="Link to this definition"></a></dt>
+<dd><p>Shows the label of the <a class="reference internal" href="#app_pereval.models.Level.summer" title="app_pereval.models.Level.summer"><code class="xref py py-attr docutils literal notranslate"><span class="pre">summer</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_FOO_display" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_FOO_display()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Level.get_winter_display">
+<span class="sig-name descname"><span class="pre">get_winter_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.CharField:</span> <span class="pre">winter&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Level.get_winter_display" title="Link to this definition"></a></dt>
+<dd><p>Shows the label of the <a class="reference internal" href="#app_pereval.models.Level.winter" title="app_pereval.models.Level.winter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">winter</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_FOO_display" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_FOO_display()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app_pereval.models.Level.id" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BigAutoField</span></code></a></p>
+<p>Primary key: ID</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#app_pereval.models.Level.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.pereval">
+<span class="sig-name descname"><span class="pre">pereval</span></span><a class="headerlink" href="#app_pereval.models.Level.pereval" title="Link to this definition"></a></dt>
+<dd><p>Type: Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> from <a class="reference internal" href="#app_pereval.models.Pereval" title="app_pereval.models.Pereval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pereval</span></code></a></p>
+<p>The pereval of this level (related name of <a class="reference internal" href="#app_pereval.models.Pereval.level" title="app_pereval.models.Pereval.level"><code class="xref py py-attr docutils literal notranslate"><span class="pre">level</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.spring">
+<span class="sig-name descname"><span class="pre">spring</span></span><a class="headerlink" href="#app_pereval.models.Level.spring" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Категория трудности: ВЕСНА</p>
+<p>Choices:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">''</span></code> (Empty string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1A</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1B</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2В</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3В</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.summer">
+<span class="sig-name descname"><span class="pre">summer</span></span><a class="headerlink" href="#app_pereval.models.Level.summer" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Категория трудности: ЛЕТО</p>
+<p>Choices:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">''</span></code> (Empty string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1A</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1B</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2В</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3В</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Level.winter">
+<span class="sig-name descname"><span class="pre">winter</span></span><a class="headerlink" href="#app_pereval.models.Level.winter" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Категория трудности: ЗИМА</p>
+<p>Choices:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">''</span></code> (Empty string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1A</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1B</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2В</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3А</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3В</span></code></p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app_pereval.models.</span></span><span class="sig-name descname"><span class="pre">Pereval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/models.html#Pereval"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.models.Pereval" title="Link to this definition"></a></dt>
+<dd><p><strong>Database table:</strong> <code class="docutils literal notranslate"><span class="pre">app_pereval_pereval</span></code></p>
+<p>Модель таблицы Pereval. Имеет отдельные поля status, beauty_title, title, other_titles, connect и add_time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><em>BigAutoField</em></a>) – Primary key: ID</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Статус модерации</p></li>
+<li><p><strong>beauty_title</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Тип локации</p></li>
+<li><p><strong>title</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Название локации</p></li>
+<li><p><strong>other_titles</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Описание локации</p></li>
+<li><p><strong>connect</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><em>CharField</em></a>) – Какие локации соединяет?</p></li>
+<li><p><strong>add_time</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.DateTimeField" title="(в Django v5.0)"><em>DateTimeField</em></a>) – Дата публикации</p></li>
+</ul>
+</dd>
+</dl>
+<p>Relationship fields:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coord_id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> to <a class="reference internal" href="#app_pereval.models.Coords" title="app_pereval.models.Coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coords</span></code></a>) – Координаты (related name: <a class="reference internal" href="#app_pereval.models.Coords.pereval" title="app_pereval.models.Coords.pereval"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code></a>)</p></li>
+<li><p><strong>user</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> to <a class="reference internal" href="#app_pereval.models.AppUser" title="app_pereval.models.AppUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">AppUser</span></code></a>) – Пользователь (related name: <code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code>)</p></li>
+<li><p><strong>level</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> to <a class="reference internal" href="#app_pereval.models.Level" title="app_pereval.models.Level"><code class="xref py py-class docutils literal notranslate"><span class="pre">Level</span></code></a>) – Категория трудности (related name: <a class="reference internal" href="#app_pereval.models.Level.pereval" title="app_pereval.models.Level.pereval"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code></a>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Reverse relationships:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>images</strong> (Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> from <a class="reference internal" href="#app_pereval.models.Images" title="app_pereval.models.Images"><code class="xref py py-class docutils literal notranslate"><span class="pre">Images</span></code></a>) – All images of this pereval (related name of <a class="reference internal" href="#app_pereval.models.Images.pereval" title="app_pereval.models.Images.pereval"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code></a>)</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#app_pereval.models.Pereval.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#app_pereval.models.Pereval.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.add_time">
+<span class="sig-name descname"><span class="pre">add_time</span></span><a class="headerlink" href="#app_pereval.models.Pereval.add_time" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.DateTimeField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTimeField</span></code></a></p>
+<p>Дата публикации</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.beauty_title">
+<span class="sig-name descname"><span class="pre">beauty_title</span></span><a class="headerlink" href="#app_pereval.models.Pereval.beauty_title" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Тип локации</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><a class="headerlink" href="#app_pereval.models.Pereval.connect" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Какие локации соединяет?</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.coord_id">
+<span class="sig-name descname"><span class="pre">coord_id</span></span><a class="headerlink" href="#app_pereval.models.Pereval.coord_id" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> to <a class="reference internal" href="#app_pereval.models.Coords" title="app_pereval.models.Coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coords</span></code></a></p>
+<p>Координаты (related name: <a class="reference internal" href="#app_pereval.models.Coords.pereval" title="app_pereval.models.Coords.pereval"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.coord_id_id">
+<span class="sig-name descname"><span class="pre">coord_id_id</span></span><a class="headerlink" href="#app_pereval.models.Pereval.coord_id_id" title="Link to this definition"></a></dt>
+<dd><p>Internal field, use <a class="reference internal" href="#app_pereval.models.Pereval.coord_id" title="app_pereval.models.Pereval.coord_id"><code class="xref py py-class docutils literal notranslate"><span class="pre">coord_id</span></code></a> instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.get_next_by_add_time">
+<span class="sig-name descname"><span class="pre">get_next_by_add_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.DateTimeField:</span> <span class="pre">add_time&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Pereval.get_next_by_add_time" title="Link to this definition"></a></dt>
+<dd><p>Finds next instance based on <a class="reference internal" href="#app_pereval.models.Pereval.add_time" title="app_pereval.models.Pereval.add_time"><code class="xref py py-attr docutils literal notranslate"><span class="pre">add_time</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_next_by_FOO" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_next_by_FOO()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.get_previous_by_add_time">
+<span class="sig-name descname"><span class="pre">get_previous_by_add_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.DateTimeField:</span> <span class="pre">add_time&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Pereval.get_previous_by_add_time" title="Link to this definition"></a></dt>
+<dd><p>Finds previous instance based on <a class="reference internal" href="#app_pereval.models.Pereval.add_time" title="app_pereval.models.Pereval.add_time"><code class="xref py py-attr docutils literal notranslate"><span class="pre">add_time</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_previous_by_FOO" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_previous_by_FOO()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.get_status_display">
+<span class="sig-name descname"><span class="pre">get_status_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.CharField:</span> <span class="pre">status&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app_pereval.models.Pereval.get_status_display" title="Link to this definition"></a></dt>
+<dd><p>Shows the label of the <a class="reference internal" href="#app_pereval.models.Pereval.status" title="app_pereval.models.Pereval.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a>. See <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/instances/#django.db.models.Model.get_FOO_display" title="(в Django v5.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_FOO_display()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#app_pereval.models.Pereval.id" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.BigAutoField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BigAutoField</span></code></a></p>
+<p>Primary key: ID</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.images">
+<span class="sig-name descname"><span class="pre">images</span></span><a class="headerlink" href="#app_pereval.models.Pereval.images" title="Link to this definition"></a></dt>
+<dd><p>Type: Reverse <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> from <a class="reference internal" href="#app_pereval.models.Images" title="app_pereval.models.Images"><code class="xref py py-class docutils literal notranslate"><span class="pre">Images</span></code></a></p>
+<p>All images of this pereval (related name of <a class="reference internal" href="#app_pereval.models.Images.pereval" title="app_pereval.models.Images.pereval"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.level">
+<span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#app_pereval.models.Pereval.level" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.OneToOneField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneToOneField</span></code></a> to <a class="reference internal" href="#app_pereval.models.Level" title="app_pereval.models.Level"><code class="xref py py-class docutils literal notranslate"><span class="pre">Level</span></code></a></p>
+<p>Категория трудности (related name: <a class="reference internal" href="#app_pereval.models.Level.pereval" title="app_pereval.models.Level.pereval"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.level_id">
+<span class="sig-name descname"><span class="pre">level_id</span></span><a class="headerlink" href="#app_pereval.models.Pereval.level_id" title="Link to this definition"></a></dt>
+<dd><p>Internal field, use <a class="reference internal" href="#app_pereval.models.Pereval.level" title="app_pereval.models.Pereval.level"><code class="xref py py-class docutils literal notranslate"><span class="pre">level</span></code></a> instead.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#app_pereval.models.Pereval.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.other_titles">
+<span class="sig-name descname"><span class="pre">other_titles</span></span><a class="headerlink" href="#app_pereval.models.Pereval.other_titles" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Описание локации</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.status">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#app_pereval.models.Pereval.status" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Статус модерации</p>
+<p>Choices:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">new</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pending</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accepted</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rejected</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#app_pereval.models.Pereval.title" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.CharField" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></a></p>
+<p>Название локации</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#app_pereval.models.Pereval.user" title="Link to this definition"></a></dt>
+<dd><p>Type: <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ForeignKey" title="(в Django v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></a> to <a class="reference internal" href="#app_pereval.models.AppUser" title="app_pereval.models.AppUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">AppUser</span></code></a></p>
+<p>Пользователь (related name: <code class="xref py py-attr docutils literal notranslate"><span class="pre">pereval</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app_pereval.models.Pereval.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#app_pereval.models.Pereval.user_id" title="Link to this definition"></a></dt>
+<dd><p>Internal field, use <a class="reference internal" href="#app_pereval.models.Pereval.user" title="app_pereval.models.Pereval.user"><code class="xref py py-class docutils literal notranslate"><span class="pre">user</span></code></a> instead.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app_pereval.models.get_path_upload_images">
+<span class="sig-prename descclassname"><span class="pre">app_pereval.models.</span></span><span class="sig-name descname"><span class="pre">get_path_upload_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/models.html#get_path_upload_images"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.models.get_path_upload_images" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2024, Suchkov Maks. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
