@@ -20,6 +20,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from rest_framework import routers
 from app_pereval.views import PerevalViewSet
+from .yasg import urlpatterns as doc_urls
 
 
 router = routers.DefaultRouter()
@@ -30,6 +31,8 @@ urlpatterns = [
     path('api/submitdata/drf-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('', include(router.urls)),
 ]
+
+urlpatterns += doc_urls
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

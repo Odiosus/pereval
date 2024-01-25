@@ -4,6 +4,10 @@ from .choices import LEVELS, STATUS
 
 
 class AppUser(models.Model):
+    """
+    Модель таблицы AppUser, где будут храниться данные о каждом пользователе.
+    Имеет строковых поля: ФИО, эл. почта и номер телефона
+    """
     email = models.EmailField(verbose_name='Электронная почта')
     phone = models.CharField(max_length=15, verbose_name='Телефон')
     name = models.CharField(max_length=30, verbose_name='Имя')
@@ -11,10 +15,14 @@ class AppUser(models.Model):
     patronymic = models.CharField(max_length=30, blank=True, default=None, verbose_name='Отчество')
 
     def __str__(self):
-        return f'{self.email}'
+        return f'{self.email}, {self.name}, {self.surname}, {self.patronymic}'
 
 
 class Coords(models.Model):
+    """
+    Модель таблицы Coords. Имеет поля в виде трёх координат —
+    latitude и longitude с плавающей точкой, и height — целочисленное.
+    """
     latitude = models.FloatField(max_length=8, verbose_name='Широта')
     longitude = models.FloatField(max_length=8, verbose_name='Долгота')
     height = models.IntegerField(max_length=4, verbose_name='Высота')
@@ -24,6 +32,10 @@ class Coords(models.Model):
 
 
 class Level(models.Model):
+    """
+    Модель таблицы Level — уровень сложности перевала в разное время года.
+    Содержит четыре текстовых поля.
+    """
     winter = models.CharField(max_length=2, choices=LEVELS, default='', verbose_name='Категория трудности: ЗИМА')
     summer = models.CharField(max_length=2, choices=LEVELS, default='', verbose_name='Категория трудности: ЛЕТО')
     autumn = models.CharField(max_length=2, choices=LEVELS, default='', verbose_name='Категория трудности: ОСЕНЬ')
@@ -34,6 +46,9 @@ class Level(models.Model):
 
 
 class Pereval(models.Model):
+    """
+    Модель таблицы Pereval. Имеет отдельные поля status, beauty_title, title, other_titles, connect и add_time.
+    """
     status = models.CharField(max_length=100, choices=STATUS, default='new', verbose_name='Статус модерации')
     beauty_title = models.CharField(max_length=250, verbose_name='Тип локации')
     title = models.CharField(max_length=250, verbose_name='Название локации')
@@ -45,7 +60,7 @@ class Pereval(models.Model):
     level = models.OneToOneField(Level, on_delete=models.PROTECT, verbose_name='Категория трудности')
 
     def __str__(self):
-        return f'{self.title}'
+        return f'{self.pk} {self.beauty_title}'
 
 
 def get_path_upload_images(instance, file):
@@ -53,6 +68,9 @@ def get_path_upload_images(instance, file):
 
 
 class Images(models.Model):
+    """
+    Модель таблицы Images. Организована связь таблицы Pereval с изображениями.
+    """
     name = models.CharField(max_length=200, verbose_name='Название')
     images = models.ImageField(upload_to=get_path_upload_images, default=None, blank=True, null=True,
                                verbose_name="Фото")
