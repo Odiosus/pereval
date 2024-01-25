@@ -8,7 +8,11 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../"))
+# sys.path.insert(0, os.path.abspath("../"))
+pkg_path = os.path.abspath('..')
+sys.path.insert(0, pkg_path)
+
+master_doc = 'index'
 
 project = 'Pereval'
 copyright = '2024, Suchkov Maks'

@@ -150,7 +150,14 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-app_pereval.tests">app_pereval.tests module</a></li>
+<li><a class="reference internal" href="#module-app_pereval.tests">app_pereval.tests module</a><ul>
+<li><a class="reference internal" href="#app_pereval.tests.PerevalTestCase"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase</span></code></a><ul>
+<li><a class="reference internal" href="#app_pereval.tests.PerevalTestCase.setUp"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#app_pereval.tests.PerevalTestCase.test_pereval_detail"><code class="docutils literal notranslate"><span class="pre">PerevalTestCase.test_pereval_detail()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-app_pereval.views">app_pereval.views module</a><ul>
 <li><a class="reference internal" href="#app_pereval.views.AppUserViewSet"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet</span></code></a><ul>
 <li><a class="reference internal" href="#app_pereval.views.AppUserViewSet.filterset_fields"><code class="docutils literal notranslate"><span class="pre">AppUserViewSet.filterset_fields</span></code></a></li>
@@ -885,6 +892,27 @@ latitude и longitude с плавающей точкой, и height — цело
 </section>
 <section id="module-app_pereval.tests">
 <span id="app-pereval-tests-module"></span><h2>app_pereval.tests module<a class="headerlink" href="#module-app_pereval.tests" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app_pereval.tests.PerevalTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app_pereval.tests.</span></span><span class="sig-name descname"><span class="pre">PerevalTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/tests.html#PerevalTestCase"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.tests.PerevalTestCase" title="Link to this definition"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">APITestCase</span></code></p>
+<p>Тест на проверку получения записи о созданном объекте в таблице Pereval</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.tests.PerevalTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/tests.html#PerevalTestCase.setUp"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.tests.PerevalTestCase.setUp" title="Link to this definition"></a></dt>
+<dd><p>Создаем объект для проверки
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app_pereval.tests.PerevalTestCase.test_pereval_detail">
+<span class="sig-name descname"><span class="pre">test_pereval_detail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app_pereval/tests.html#PerevalTestCase.test_pereval_detail"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#app_pereval.tests.PerevalTestCase.test_pereval_detail" title="Link to this definition"></a></dt>
+<dd><p>Тест на получение записи о созданном объекте (pereval_1) таблицы Pereval
+:return: ok</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-app_pereval.views">
 <span id="app-pereval-views-module"></span><h2>app_pereval.views module<a class="headerlink" href="#module-app_pereval.views" title="Link to this heading"></a></h2>
